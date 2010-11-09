@@ -8,10 +8,13 @@ CPP_FILES= indent.cpp
 
 OBJS= $(CPP_FILES:.cpp=.obj)
 
-all: x_exe
+all: ver x_exe
 
 .cpp.obj:
 	$(cc) -Ox $(cflags) $(cvarsdll) -DSTRICT -GX -YX -DNODEBUG $<
+
+ver: 
+	-SubWCRev . version.hxx tmp\version.h
 
 x_exe: $(OBJS)
 	$(link) /dll /NODEFAULTLIB:LIBCMT.LIB /RELEASE /VERSION:2.4 -out:$(PRJNAME).dll $(OBJS) $(LIB_FILES) /DEF:$(PRJNAME).def

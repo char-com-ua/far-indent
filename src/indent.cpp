@@ -1,4 +1,5 @@
 #include "indent.h"
+#include "tmp\version.h"
 
 #define PROCESS_EVENT 0
 #define IGNORE_EVENT  1
@@ -10,6 +11,14 @@ extern "C" {
 
 BOOL WINAPI __stdcall LibMain( HINSTANCE inst, DWORD reason, LPVOID data ){
 	return 1;
+}
+
+void __stdcall version(){
+	FILE*f=fopen("indent.ver","wt");
+	fprintf(f,"version=%s\n",PROJECT_VER);
+	fprintf(f,"date=%s\n",PROJECT_DATE);
+	fflush(f);
+	fclose(f);
 }
 
 /*-----==< EXPORTED FUNCTIONS >==-----*/

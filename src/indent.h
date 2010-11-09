@@ -6,17 +6,18 @@
 
 #include <windows.h>
 #include "plugin.h"
+#include <stdio.h>
 
-#define DEBUG
+//#define DEBUG
 
 #ifdef DEBUG
-#include <stdio.h>
 #include <stdlib.h>
 FILE *flog=NULL;
 #define DBG(i) i
 #else
 #define DBG(i) 
 #endif
+
 
 int IndentBlock();
 int UnIndentBlock();
