@@ -1,7 +1,6 @@
-PlugIn Indent for Far Manager Ver 1.62, 2001-06-09
-  Dmitry Lukyanov. (c) 2001.
-  http://ldu.da.ru
-  ldu@writeme.com
+PlugIn Indent for Far Manager Ver 1.62 +
+  http://code.google.com/p/far-indent/
+  dlukyanov@ukr.net
 
 Features:
  - Shift block right with  TAB key by TAB size or TAB symbol
