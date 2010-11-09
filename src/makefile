@@ -18,6 +18,7 @@ ver:
 
 x_exe: $(OBJS)
 	$(link) /dll /NODEFAULTLIB:LIBCMT.LIB /RELEASE /VERSION:2.4 -out:$(PRJNAME).dll $(OBJS) $(LIB_FILES) /DEF:$(PRJNAME).def
+	-copy *.dll ..\setup
 
 clean:
 	-del *.obj
